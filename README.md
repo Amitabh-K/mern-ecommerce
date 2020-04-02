@@ -10,14 +10,14 @@
 
 ## Demo
 
-This application is deployed on Heroku. Please check it out :smile: [here](https://pacific-reaches-80202.herokuapp.com/).
+This application is deployed on Heroku. Please check it out :smile: [here](https://ooooooooooooooooooooooooooooo.herokuapp.com/).
 
 ## Install
 
 Some basic Git commands are:
 
 ```
-$ git clone https://github.com/mohamedsamara/mern-ecommerce.git
+$ git clone https://github.com/Amitabh-K/mern-ecommerce.git
 $ cd project
 $ npm install
 

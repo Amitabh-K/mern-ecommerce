@@ -24,7 +24,7 @@ app.use(cors());
 app.use(passport.initialize());
 app.use(passport.session());
 
-// Connect to MongoDB
+// // Connect to MongoDB
 // mongoose
 //   .connect(mongoURI, {   useNewUrlParser: true,
 //     useFindAndModify: false,
@@ -35,12 +35,20 @@ app.use(passport.session());
 //   .catch(err => console.log(err));
 
 
-// for  localhost 3000
-mongoose.connect("mongodb://localhost/5000", {
+// // for  localhost 5000
+// mongoose.connect("mongodb://localhost/5000", {
+//   useNewUrlParser: true,
+//   useFindAndModify: false,
+//   useMongoClient: true
+// });
+
+//for heroku mLab
+mongoose.connect(process.env.MONGODB_URI || "mongodb://<dbuser>:<dbpassword1>@ds139360.mlab.com:39360/heroku_8fn2cgjw", {
   useNewUrlParser: true,
   useFindAndModify: false,
   useMongoClient: true
 });
+
 
 require('./config/passport')(passport);
 app.use(routes);
